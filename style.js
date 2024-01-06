@@ -1,30 +1,32 @@
-// ナビゲーションバーのリンクの動作
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(event) {
-        event.preventDefault();
-        window.location.href = this.href;
-    });
-});
+document.addEventListener("DOMContentLoaded", function() {
+    // Function to update styles
+    function updateStyles() {
+        const body = document.body;
+        const headers = document.querySelectorAll('h2');
+        const links = document.querySelectorAll('nav a');
 
-// ボタンの動作
-document.querySelectorAll(".planet-button").forEach(button => {
-    button.addEventListener("click", function() {
-        window.location.href = this.getAttribute("href");
-    });
-});
+        // Set body styles
+        body.style.fontFamily = 'Arial, sans-serif';
+        body.style.backgroundColor = '#f4f4f4';
+        body.style.color = '#333';
 
-document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault(); // デフォルトのアンカー機能を無効化
-
-        // アンカーのhref属性から、リンク先のidを取得
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-
-        // スムーズスクロールを実行
-        targetElement.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        // Set header styles
+        headers.forEach(header => {
+            header.style.color = '#4a90e2';
         });
-    });
+
+        // Set navigation link styles
+        links.forEach(link => {
+            link.style.color = '#4a90e2';
+            link.onmouseover = function() {
+                this.style.color = '#d9534f';
+            };
+            link.onmouseout = function() {
+                this.style.color = '#4a90e2';
+            };
+        });
+    }
+
+    // Call the updateStyles function to apply the styles
+    updateStyles();
 });
