@@ -41,3 +41,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    var menuToggle = document.querySelector('.menu-toggle');
+    var nav = document.querySelector('nav ul');
+
+    menuToggle.addEventListener('click', function() {
+        nav.style.display = nav.style.display === 'block' ? 'none' : 'block';
+    });
+});

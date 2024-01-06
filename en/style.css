@@ -118,6 +118,40 @@ footer {
 }
 
 .language-switch select {
-    padding: 5px 10px;
+    padding: 3px 3px;
+    font-size: 10px;
     cursor: pointer;
+}
+
+/* Existing styles... */
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px; /* Size of the hamburger icon */
+    cursor: pointer;
+}
+
+/* Hide the navigation menu by default on small screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav ul {
+        display: none; /* Hide the menu */
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        float: none;
+        display: block;
+    }
+
+    nav ul li a {
+        padding: 10px;
+    }
 }
