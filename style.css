@@ -5,6 +5,11 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    background-image: url('image/logo.png'); /* Update with the correct path to your image */
+    background-position: center center; /* Center the image both horizontally and vertically */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Cover the entire area, may cause image to be cropped */
+    background-attachment: fixed; /* Keep the image fixed during scrolling */
 }
 
 /* Header Styles */
@@ -61,14 +66,6 @@ footer {
     width: 100%;
 }
 
-body {
-    background-image: url('image/logo.png');
-    background-size: cover;  /* Cover the entire viewport */
-    background-repeat: no-repeat;
-    background-attachment: fixed; /* Keep the image fixed during scrolling */
-}
-
-
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     nav ul li {
@@ -79,11 +76,37 @@ body {
     /* Other responsive styles... */
 }
 
-
-/* Adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    body {
-        background-size: contain; /* Change to 'contain' to see the whole image on smaller screens */
-    }
+/* Make sure the HTML and body elements cover the full height of the viewport */
+html, body {
+    height: 100%;
+    margin: 0;
 }
 
+/* Container for all content except footer */
+.wrapper {
+    min-height: 100%;
+    /* Equal to footer height */
+    margin-bottom: -50px; /* Adjust this value to match the height of your footer */
+}
+
+/* Footer styles */
+footer {
+    height: 50px; /* Adjust this value based on your footer's height */
+    background-color: #333;
+    /* Other styling for your footer */
+}
+
+/* Clearfix for the wrapper */
+.wrapper:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* Adjustments for your footer */
+/* Add this if you have not already defined footer styles */
+footer {
+    position: relative;
+    width: 100%;
+    clear: both;
+}
