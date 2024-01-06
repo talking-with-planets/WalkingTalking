@@ -68,3 +68,22 @@ body {
     background-attachment: fixed; /* Keep the image fixed during scrolling */
 }
 
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    nav ul li {
+        float: none;
+        width: 100%;
+    }
+
+    /* Other responsive styles... */
+}
+
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    body {
+        background-size: contain; /* Change to 'contain' to see the whole image on smaller screens */
+    }
+}
+
