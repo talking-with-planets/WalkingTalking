@@ -161,6 +161,21 @@ p {
     background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
     padding: 10px; /* Add some padding around the text */
     border-radius: 5px; /* Optional: rounded corners for aesthetic */
+    display: inline-block; /* Apply background only to the text */
+}
+
+h2 {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: rounded corners for aesthetic */
+    display: inline-block; /* Apply background only to the text */
+}
+
+li2 {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white background */
+    padding: 10px; /* Add some padding around the text */
+    border-radius: 5px; /* Optional: rounded corners for aesthetic */
+    display: inline-block; /* Apply background only to the text */
 }
 
 #site-header {
